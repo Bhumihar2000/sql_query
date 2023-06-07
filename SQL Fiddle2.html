@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://sqlfiddle.com/#!9/9dfa7b/13 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>SQL Fiddle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application for testing and sharing SQL queries.">
+    <meta name="author" content="ZZZ Projects">
+
+    <meta property="og:title" content="SQL Fiddle | A tool for easy online testing and sharing of database problems and their solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sqlfiddle.com/">
+    <meta property="og:image" content="https://sqlfiddle.com/images/fiddle_transparent.png">
+    <meta property="og:site_name" content="SQL Fiddle">
+
+    <link rel="icon" href="http://sqlfiddle.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://sqlfiddle.com/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="./SQL Fiddle2_files/styles_min.css">
+    <link rel="stylesheet" type="text/css" href="./SQL Fiddle2_files/print_min.css" media="print">
+</head>
+<body style="">
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="http://sqlfiddle.com/">SQL Fiddle<img src="./SQL Fiddle2_files/fiddle_transparent_small.png" style="height: 20px;margin-top: -10px;"> </a>
+
+                <ul class="nav" id="db_type_label_collapsed">
+                    <li class="">
+                    <p class="navbar-text">MySQL 5.6</p>
+                    </li>
+                </ul>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown" id="db_type_id">        <a class="dropdown-toggle" data-toggle="dropdown" href="http://sqlfiddle.com/#">
+            MySQL 5.6 <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li db_type_id="9" class="active"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MySQL 5.6</a></li>
+            <li db_type_id="13" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MySQL 5.7</a></li>
+            <li db_type_id="2" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MySQL 5.5</a></li>
+            <li db_type_id="8" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MySQL 5.1</a></li>
+            <li db_type_id="4" class=""><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>Oracle 11g R2</a></li>
+            <li db_type_id="17" class=""><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>PostgreSQL 9.6</a></li>
+            <li db_type_id="15" class=""><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>PostgreSQL 9.3</a></li>
+            <li db_type_id="12" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>PostgreSQL 9.2</a></li>
+            <li db_type_id="1" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>PostgreSQL 9.1</a></li>
+            <li db_type_id="11" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>PostgreSQL 8.4</a></li>
+            <li db_type_id="10" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>PostgreSQL 8.3</a></li>
+            <li db_type_id="7" class=""><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>SQLite (WebSQL)</a></li>
+            <li db_type_id="5" class=""><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>SQLite (SQL.js)</a></li>
+            <li db_type_id="18" class=""><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MS SQL Server 2017</a></li>
+            <li db_type_id="6" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MS SQL Server 2014</a></li>
+            <li db_type_id="3" class=" hidden"><a href="http://sqlfiddle.com/#"><i class="icon-tag"></i>MS SQL Server 2008</a></li>
+        </ul>
+</li>
+
+                        <li class="divider-vertical"></li>
+
+                        <li>
+                            <a id="sample" href="http://sqlfiddle.com/#viewSample"><i class="icon-list-alt"></i>View Sample Fiddle</a>
+                        </li>
+
+                        <li>
+                            <a id="clear" href="http://sqlfiddle.com/#clear"><i class="icon-refresh"></i>Clear</a>
+                        </li>
+
+                        <li>
+                            <a href="http://sqlfiddle.com/#textToDDLModal" data-toggle="modal"><i class="icon-wrench"></i>Text to DDL</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav pull-right">
+                        <li>
+
+							<a href="https://zzzprojects.com/contribute" target="_blank">
+								<input type="image" style="width:80px;height:24px;" src="./SQL Fiddle2_files/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							</a>
+
+                        </li>
+
+                        <li class="optional">
+                            <a href="http://sqlfiddle.com/about.html"><i class="icon-info-sign"></i>About</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+                <ul class="nav pull-right" id="exit_fullscreen">
+                    <li class="">
+                    <a href="http://sqlfiddle.com/#"><span>Exit Fullscreen</span> <i class="icon-resize-small"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+
+            <div class="span12" id="content">
+
+                <div class="span12" id="schema-output" style="height: 343.1px;">
+                    <div class="span6 panel schema pull-left">
+
+                        <div class="helpTip alert alert-info alert-block" style="display: none;">
+                            <h4 class="alert-heading">Schema Panel</h4>
+                            Use this panel to setup your database problem (CREATE TABLE, INSERT, and whatever other statements you need to prepare a representative sample of your real database).
+                            Use "Text to DDL" to quickly build your schema objects from text.
+                        </div>
+
+                                <form id="fiddleFormDDL" method="post" action="http://sqlfiddle.com/">
+                                    <textarea id="schema_ddl" style="display: none; height: 290px;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 290px; left: 34.8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 17px;"><div style="min-width: 1px; height: 628px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="display: block; right: 17px; left: 30px;"><div style="height: 100%; min-height: 1px; width: 984.7px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="display: block; height: 17px; width: 17px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="height: 300px;"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -17px; border-right-width: 13px; min-height: 628px; min-width: 984.7px; padding-right: 17px; padding-bottom: 17px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>31</div></div></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">create</span> <span class="cm-keyword">table</span> employees (</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>employee_id <span class="cm-builtin">INT</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>first_name <span class="cm-builtin">VARCHAR</span>(<span class="cm-number">50</span>),</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>last_name <span class="cm-builtin">VARCHAR</span>(<span class="cm-number">50</span>),</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>email <span class="cm-builtin">VARCHAR</span>(<span class="cm-number">50</span>),</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>hire_date <span class="cm-builtin">DATE</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>department <span class="cm-builtin">VARCHAR</span>(<span class="cm-number">17</span>),</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>gender <span class="cm-builtin">VARCHAR</span>(<span class="cm-number">1</span>),</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>salary <span class="cm-builtin">INT</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>region_id <span class="cm-builtin">INT</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">primary</span> <span class="cm-keyword">key</span> (employee_id)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">1</span>, <span class="cm-string">'Berrie'</span>, <span class="cm-string">'Manueau'</span>, <span class="cm-string">'bmanueau0@dion.ne.jp'</span>, <span class="cm-string">'2006-04-20'</span>, <span class="cm-string">'Sports'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">154864</span>, <span class="cm-number">4</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">2</span>, <span class="cm-string">'Aeriell'</span>, <span class="cm-string">'McNee'</span>, <span class="cm-string">'amcnee1@google.es'</span>, <span class="cm-string">'2009-01-26'</span>, <span class="cm-string">'Tools'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">56752</span>, <span class="cm-number">3</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">3</span>, <span class="cm-string">'Sydney'</span>, <span class="cm-string">'Symonds'</span>, <span class="cm-string">'ssymonds2@hhs.gov'</span>, <span class="cm-string">'2010-05-17'</span>, <span class="cm-string">'Clothing'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">95313</span>, <span class="cm-number">4</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">4</span>, <span class="cm-string">'Avrom'</span>, <span class="cm-string">'Rowantree'</span>, <span class="cm-atom">null</span>, <span class="cm-string">'2014-08-02'</span>, <span class="cm-string">'Phones &amp; Tablets'</span>, <span class="cm-string">'M'</span>, <span class="cm-number">119674</span>, <span class="cm-number">7</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">5</span>, <span class="cm-string">'Feliks'</span>, <span class="cm-string">'Morffew'</span>, <span class="cm-string">'fmorffew4@a8.net'</span>, <span class="cm-string">'2003-01-14'</span>, <span class="cm-string">'Computers'</span>, <span class="cm-string">'M'</span>, <span class="cm-number">55307</span>, <span class="cm-number">5</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">6</span>, <span class="cm-string">'Bethena'</span>, <span class="cm-string">'Trow'</span>, <span class="cm-string">'btrow5@technorati.com'</span>, <span class="cm-string">'2003-06-08'</span>, <span class="cm-string">'Sports'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">134501</span>, <span class="cm-number">3</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">7</span>, <span class="cm-string">'Ardeen'</span>, <span class="cm-string">'Curwood'</span>, <span class="cm-string">'acurwood6@1und1.de'</span>, <span class="cm-string">'2006-02-19'</span>, <span class="cm-string">'Clothing'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">28995</span>, <span class="cm-number">7</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">8</span>, <span class="cm-string">'Seline'</span>, <span class="cm-string">'Dubber'</span>, <span class="cm-string">'sdubber7@t-online.de'</span>, <span class="cm-string">'2012-05-28'</span>, <span class="cm-string">'Phones &amp; Tablets'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">101066</span>, <span class="cm-number">3</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">9</span>, <span class="cm-string">'Dayle'</span>, <span class="cm-string">'Trail'</span>, <span class="cm-string">'dtrail8@tamu.edu'</span>, <span class="cm-string">'2003-03-01'</span>, <span class="cm-string">'First Aid'</span>, <span class="cm-string">'F'</span>, <span class="cm-number">82753</span>, <span class="cm-number">1</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">10</span>, <span class="cm-string">'Redford'</span>, <span class="cm-string">'Roberti'</span>, <span class="cm-atom">null</span>, <span class="cm-string">'2008-07-21'</span>, <span class="cm-string">'Clothing'</span>, <span class="cm-string">'M'</span>, <span class="cm-number">72225</span>, <span class="cm-number">7</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">insert</span> <span class="cm-keyword">into</span> employees <span class="cm-keyword">values</span> (<span class="cm-number">11</span>, <span class="cm-string">'Nickey'</span>, <span class="cm-string">'Pointon'</span>, <span class="cm-string">'npointona@vistaprint.com'</span>, <span class="cm-string">'2006-12-30'</span>, <span class="cm-string">'Jewelry'</span>, <span class="cm-string">'M'</span>, <span class="cm-number">126333</span>, <span class="cm-number">7</span>);</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 17px solid transparent; top: 628px;"></div><div class="CodeMirror-gutters" style="height: 658px; left: 1.90735e-06px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="height: 298px; width: 29px;"></div></div></div></div>
+
+                                    <div id="browser" style="height: 300px;">        <h3>Schema Browser</h3>
+        <ul class="tables">
+            <li>
+                <a href="http://sqlfiddle.com/#employees"><i class="icon-plus"></i> employees</a> (TABLE)
+                <ul class="columns">
+                    <li>employee_id INT(10)</li>
+                    <li>first_name VARCHAR(50)</li>
+                    <li>last_name VARCHAR(50)</li>
+                    <li>email VARCHAR(50)</li>
+                    <li>hire_date DATE(10)</li>
+                    <li>department VARCHAR(17)</li>
+                    <li>gender VARCHAR(1)</li>
+                    <li>salary INT(10)</li>
+                    <li>region_id INT(10)</li>
+                </ul>
+            </li>
+        </ul>
+</div>
+
+                                    <div class="action_buttons ddl_actions">
+
+                                        <a href="http://sqlfiddle.com/#" id="buildSchema" title="You can also press Ctrl-Enter while editing">
+                                        <label for="result-ddl" class="btn btn-primary">
+                                            Build Schema <i class="icon-download-alt icon-white"></i>
+                                        </label>
+                                        </a>
+
+                                        <a href="http://sqlfiddle.com/#" id="schemaFullscreen" class="btn btn-info">
+                                            Edit Fullscreen <i class="icon-resize-full icon-white"></i>
+                                        </a>
+
+                                        <a href="http://sqlfiddle.com/#" id="schemaBrowser" class="btn btn-info">
+                                            Browser <i class="icon-indent-left icon-white"></i>
+                                        </a>
+    <!--
+                                        <a href="#" id="schemaDiagram" class="btn btn-info">
+                                            Diagram <i class="icon-qrcode"></i>
+                                        </a>
+    -->
+                                        <div class="btn-group terminator" id="schemaStmtTerminator" data-statement_separator=";">
+                                            <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="http://sqlfiddle.com/#">
+                                            [ ; ]
+                                            <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu nav">
+                                                <li class="nav-header">Query Terminator</li>
+                                                <li class="divider"></li>
+                                                <li><a href="http://sqlfiddle.com/;">Semi-colon [ ; ]</a></li>
+                                                <li><a href="http://sqlfiddle.com/%7C">Pipe [ | ]</a></li>
+                                                <li><a href="http://sqlfiddle.com/">Slash [ / ]</a></li>
+                                                <li><a href="http:">Double-slash [ // ]</a></li>
+                                                <li><a href="http://sqlfiddle.com/GO">Keyword [ GO ]</a></li>
+                                            </ul>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="action_buttons browser_actions">
+                                        <a href="http://sqlfiddle.com/#" id="ddlEdit" class="btn btn-info">
+                                            DDL Editor <i class="icon-pencil icon-white"></i>
+                                        </a>
+                                    </div>
+
+
+
+                                </form>
+
+                    </div><!-- end ddl div -->
+
+
+                    <div class="span6 panel sql pull-right needsReadySchema" style="zoom: 1;">
+
+
+                        <div class="helpTip alert alert-info alert-block" style="display: none;">
+                            <h4 class="alert-heading">Query Panel</h4>
+                            Use this panel to try to solve the problem with other SQL statements (SELECTs, etc...).
+                            Results will be displayed below. Share your queries by copying and pasting the URL that is generated after each run.
+                        </div>
+
+
+                        <form id="fiddleFormSQL" method="post" action="http://sqlfiddle.com/" class="schema_ready">
+                            <textarea id="sql" style="display: none; height: 290px;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 290px; left: 34.8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 348px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="height: 300px;" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -17px; border-right-width: 13px; min-height: 348px; min-width: 607.438px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 300px; width: 664px; height: 20px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 320px; width: 515.775px; height: 20px;"></div></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> * <span class="cm-keyword">from</span> employees;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> first_name, last_name, department</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">from</span> employees</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">where</span> department = <span class="cm-string">'Sports'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> * <span class="cm-keyword">from</span> employees</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">where</span> department = <span class="cm-string">'Sports'</span> <span class="cm-keyword">AND</span> gender = <span class="cm-string">'F'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> * <span class="cm-keyword">from</span> employees</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">where</span> department = <span class="cm-string">'Clothing'</span> <span class="cm-keyword">OR</span> gender = <span class="cm-string">'F'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> * <span class="cm-keyword">from</span> employees</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">where</span> first_name = <span class="cm-string">'Sydney'</span> <span class="cm-keyword">AND</span> (department = <span class="cm-string">'Clothing'</span> <span class="cm-keyword">AND</span> salary &gt;= <span class="cm-number">40000</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> * <span class="cm-keyword">from</span> employees</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">where</span> gender = <span class="cm-string">'F'</span> <span class="cm-keyword">AND</span> (department = <span class="cm-string">'Sports'</span> <span class="cm-keyword">AND</span> salary &gt;= <span class="cm-number">60000</span>);</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 348px;"></div><div class="CodeMirror-gutters" style="height: 361px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="height: 298px; width: 29px;"></div></div></div></div>
+
+                            <div class="action_buttons">
+
+                                <div class="btn-group" id="runQueryOptions">
+
+                                        <a href="http://sqlfiddle.com/#" class="runQuery btn btn-primary" title="You can also press Ctrl-Enter while editing">Run SQL <i class="icon-play icon-white"></i></a>
+
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <!-- dropdown menu links -->
+                                        <li><a href="http://sqlfiddle.com/#" id="tabular">Tabular Output</a></li>
+                                        <li><a href="http://sqlfiddle.com/#" id="plaintext">Plaintext Output</a></li>
+                                        <li><a href="http://sqlfiddle.com/#" id="markdown">Markdown Output</a></li>
+                                    </ul>
+
+                                </div>
+
+                                <a href="http://sqlfiddle.com/#" id="queryFullscreen" class="btn btn-info">
+                                    Edit Fullscreen <i class="icon-resize-full icon-white"></i>
+                                </a>
+
+                                <!--a href="#" id="queryPrettify" class="btn btn-info">
+                                    Format Code <i class="icon-filter icon-white"></i>
+                                </a-->
+
+                                <div class="btn-group terminator" id="queryStmtTerminator" data-statement_separator=";">
+                                    <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="http://sqlfiddle.com/#">
+                                    [ ; ]
+                                    <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav">
+                                        <li class="nav-header">Query Terminator</li>
+                                        <li class="divider"></li>
+                                        <li><a href="http://sqlfiddle.com/;">Semi-colon [ ; ]</a></li>
+                                        <li><a href="http://sqlfiddle.com/%7C">Pipe [ | ]</a></li>
+                                        <li><a href="http://sqlfiddle.com/">Slash [ / ]</a></li>
+                                        <li><a href="http:">Double-slash [ // ]</a></li>
+                                        <li><a href="http://sqlfiddle.com/GO">Keyword [ GO ]</a></li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+                        </form>
+                    </div><!-- end sql div -->
+
+                </div><!-- end schema-output -->
+
+                <div class="span12 panel needsReadySchema" id="output" style="min-height: 144.9px; zoom: 1;"><div class="set" id="set_0">
+        <table class="results table table-bordered table-striped">
+            <tbody><tr>
+            <th>employee_id</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>hire_date</th>
+            <th>department</th>
+            <th>gender</th>
+            <th>salary</th>
+            <th>region_id</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Berrie</td>
+                <td>Manueau</td>
+                <td>bmanueau0@dion.ne.jp</td>
+                <td>2006-04-20</td>
+                <td>Sports</td>
+                <td>F</td>
+                <td>154864</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Bethena</td>
+                <td>Trow</td>
+                <td>btrow5@technorati.com</td>
+                <td>2003-06-08</td>
+                <td>Sports</td>
+                <td>F</td>
+                <td>134501</td>
+                <td>3</td>
+            </tr>
+        </tbody></table>
+        <div id="messages_0" class="alert alert-success database-messages">
+            <i class="icon-ok"></i>
+            Record Count: 2; Execution Time: 10ms
+            <a href="http://sqlfiddle.com/#executionPlan" class="executionPlanLink"><i class="icon-plus"></i>View Execution Plan</a>
+            <a href="http://sqlfiddle.com/#!9/9dfa7b/13/0" class="setLink"><i class="icon-share-alt"></i> link</a>
+        </div>
+
+            <table class="executionPlan table table-bordered">
+                <tbody><tr>
+                <th>id</th>
+                <th>select_type</th>
+                <th>table</th>
+                <th>type</th>
+                <th>possible_keys</th>
+                <th>key</th>
+                <th>key_len</th>
+                <th>ref</th>
+                <th>rows</th>
+                <th>filtered</th>
+                <th>Extra</th>
+                </tr>
+                <tr>
+                    <td><div style="position:relative">1</div></td>
+                    <td><div style="position:relative">SIMPLE</div></td>
+                    <td><div style="position:relative">employees</div></td>
+                    <td><div style="position:relative">ALL</div></td>
+                    <td><div style="position:relative"></div></td>
+                    <td><div style="position:relative"></div></td>
+                    <td><div style="position:relative"></div></td>
+                    <td><div style="position:relative"></div></td>
+                    <td><div style="position:relative">17</div></td>
+                    <td><div style="position:relative">100.00</div></td>
+                    <td><div style="position:relative">Using where</div></td>
+                </tr>
+
+
+            </tbody></table>
+
+</div>
+
+<span id="donationSuggestion">Did this query solve the problem? If so, consider donating $5 to help make sure SQL Fiddle will be here next time you need help with a database problem. Thanks!</span>
+</div> <!-- end output -->
+
+            </div><!-- end content -->
+        </div><!-- end row-fluid -->
+
+    </div><!-- end container-fluid -->
+
+    <div style="text-align: center"><br><a href="https://entityframework-extensions.net/" target="_blank"><img src="./SQL Fiddle2_files/ef-ext-lb.jpg" style="border:1px solid black"></a></div>
+
+    <div id="textToDDLModal" class="modal">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">x</a>
+            <h3>Formatted Text Table to DDL</h3>
+        </div>
+
+      <div class="modal-body">
+            <label for="tableName">Table Name: </label><input type="text" id="tableName" value="Table1"><br>
+            <textarea id="raw" cols="40" rows="8" placeholder="Paste formatted text here. CSV, space-separated, pipe-delimited are all valid."></textarea>
+            <hr>
+
+            <pre id="parseResults"></pre>
+
+    </div>
+    <div class="modal-footer">
+        <div class="pull-left">
+            <i class="icon-info-sign"></i>
+            <a href="http://dygraphs.com/date-formats.html" target="_blank">Date problems?</a>
+            |
+            <a href="https://github.com/jakefeasel/DDLBuilder/blob/master/ddl_builder/qunit/fixture.html" target="_blank">Example Input</a>
+        </div>
+        <a href="http://sqlfiddle.com/#" id="appendDDL" class="btn btn-primary">Append to DDL</a>
+        <a href="http://sqlfiddle.com/#" id="parseDDL" class="btn">Test Parse</a>
+    </div>
+
+    </div>
+
+    <div id="myFiddlesModal" class="modal">
+
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">x</a>
+            <ul class="nav nav-tabs" id="myFiddlesTabs">
+                <li class="active"><a href="http://sqlfiddle.com/#fiddle_history" data-toggle="tab">Fiddle History (this session)</a></li>
+                <li id="favorites_tab"><a href="http://sqlfiddle.com/#favorites" data-toggle="tab">Favorites <i class="icon-star"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="fiddle_history">
+            </div>
+            <div class="tab-pane" id="favorites">
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal"></div>
+
+    <script type="text/javascript" async="" src="./SQL Fiddle2_files/ga.js.download"></script><script type="text/javascript" src="./SQL Fiddle2_files/main_min.js.download"></script>
+
+<script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-28576776-1']);
+          _gaq.push(['_setDomainName', 'sqlfiddle.com']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+</script>
+  
+
+</body></html>
